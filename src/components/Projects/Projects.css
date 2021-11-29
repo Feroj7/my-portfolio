@@ -1,0 +1,6 @@
+.project-card {
+  -webkit-box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px gray;
+  padding: 10px;
+  border-radius: 5px;
+}
