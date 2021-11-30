@@ -4,3 +4,15 @@
   padding: 10px;
   border-radius: 5px;
 }
+.tech-bg {
+  background-color: #4b5769;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 600px) {
+  .project-style {
+    flex-direction: column;
+  }
+}

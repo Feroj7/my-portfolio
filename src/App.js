@@ -7,6 +7,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import ProjectDetail from './components/ProjectDetail/ProjectDetail';
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       <BrowserRouter>
         <Header></Header>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/projectDetail/:id" element={<ProjectDetail />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

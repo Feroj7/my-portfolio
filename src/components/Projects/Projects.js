@@ -1,38 +1,64 @@
 import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Projects.css';
 
 const Projects = () => {
+
+    const projects = [
+        {
+            id: 1,
+            name: "Bicycle Store",
+            description: "A full-stack Bicyle Store web app where people can buy different model bicycles. User can login or register by both email, password or google login. Client can see his/her orders in dashboard and can give a review. An admin can add a new bicycle from the dashboard. Admin can also manage user orders and make someone admin.",
+            img: "https://i.ibb.co/b3bJ49t/bicycle.jpg",
+            tech1: "React.js",
+            tech2: "Node.js",
+            tech3: "Express",
+            tech4: "MongoDB",
+        },
+        {
+            id: 2,
+            name: "Tour Express",
+            description: "A Single page web app with dashboard where people can pick destination to travel. A user can see his/her bookings and cancel from dashboard.",
+            img: "https://i.ibb.co/SNQph25/tour.jpg",
+            tech1: "React.js",
+            tech2: "Node.js",
+            tech3: "MongoDB",
+            tech4: "Firebase",
+        },
+        {
+            id: 3,
+            name: "Doctor Connect",
+            description: "A Single page web where user can see details about doctor. Their chamber, address, visiting hour, visit etc.",
+            img: "https://i.ibb.co/K9FSRSw/doctor-connect-1.jpg",
+            tech1: "React.js",
+            tech2: "React Router",
+            tech3: "Bootstrap",
+            tech4: "Firebase",
+        },
+    ]
+
     return (
-        <div className="my-5">
+        <div className="my-5" id="#projects">
             <Container>
                 <h1 className="mb-5">My Projects</h1>
-                <Row xs={1} md={3} className="g-4">
-                    <Col>
-                        <div className="project-card">
-                            <img className="img-fluid" src="https://i.ibb.co/SNQph25/tour.jpg" alt="" />
-                            <h3 className="mt-3">Tour Express</h3>
-                            <p>A MERN stack project</p>
-                            <Button>View Detail</Button>
+                {
+                    projects.map(project => <div key={project.id} className="mt-5 d-flex justify-content-around project-style">
+                        <div>
+                            <img className="img-fluid" src={project?.img} alt="" />
                         </div>
-                    </Col>
-                    <Col>
-                        <div className="project-card">
-                            <img className="img-fluid" src="https://i.ibb.co/BfXVdMn/employee.jpg" alt="" />
-                            <h3 className="mt-3">Employee Hiring Site</h3>
-                            <p>A React SPA</p>
-                            <Button>View Detail</Button>
+                        <div className="text-start text-white p-4" style={{ backgroundColor: "#172A45" }}>
+                            <h3>{project.name}</h3>
+                            <p>{project.description}</p>
+                            <span className="tech-bg">{project?.tech1}</span>
+                            <span className="tech-bg">{project?.tech2}</span>
+                            <span className="tech-bg">{project?.tech3}</span>
+                            <span className="tech-bg">{project?.tech4}</span>
+                            <br />
+                            <Link to={`/ProjectDetail/${project.id}`}><Button className="mt-5">View Detail</Button></Link>
                         </div>
-                    </Col>
-                    <Col>
-                        <div className="project-card">
-                            <img className="img-fluid" src="https://i.ibb.co/b3bJ49t/bicycle.jpg" alt="" />
-                            <h3 className="mt-3">Bicycle Store</h3>
-                            <p>A MERN stack project</p>
-                            <Button>View Detail</Button>
-                        </div>
-                    </Col>
-                </Row>
+                    </div>)
+                }
             </Container>
         </div>
     );
