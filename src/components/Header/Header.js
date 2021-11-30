@@ -16,6 +16,7 @@ const Header = () => {
                                 <Nav.Link className="text-white" as={HashLink} to="/home#home">Home</Nav.Link>
                                 <Nav.Link className="text-white" as={HashLink} to="/home#skills">Skills</Nav.Link>
                                 <Nav.Link className="text-white" as={HashLink} to="/home#projects">Projects</Nav.Link>
+                                <Nav.Link className="text-white" as={HashLink} to="/home#blogs">Blogs</Nav.Link>
                                 <Nav.Link className="text-white" as={HashLink} to="/home#about">About</Nav.Link>
                                 <Nav.Link className="text-white" as={HashLink} to="/home#contact">Contact</Nav.Link>
                             </Nav>

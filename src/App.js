@@ -8,6 +8,7 @@ import {
   Route
 } from "react-router-dom";
 import ProjectDetail from './components/ProjectDetail/ProjectDetail';
+import Blogs from './components/Blogs/Blogs';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/projectDetail/:id" element={<ProjectDetail />}></Route>
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/projectDetail/:id" element={<ProjectDetail />} />
         </Routes>
       </BrowserRouter>
     </div>

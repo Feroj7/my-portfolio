@@ -2,6 +2,10 @@ import React from 'react';
 import { Col, Container, Row, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Projects.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 const Projects = () => {
 
@@ -45,7 +49,9 @@ const Projects = () => {
                 <Row xs={1} md={3} className="g-4">
                     {
                         projects.map(project => <Col key={project.id}>
-                            <Card className="h-100 project-card">
+                            <Card
+                                data-aos="zoom-in-down"
+                                className="h-100 project-card">
                                 <Card.Img variant="top" src={project.img} />
                                 <Card.Body>
                                     <Card.Title>{project.name}</Card.Title>

@@ -22,14 +22,14 @@ const Contact = () => {
         <div className="my-5" id="contact">
             <Container>
                 <h1>Contact</h1>
-                <Row xs={1} md={2}>
+                <Row xs={1} md={2} className="g-4">
                     {/* image area */}
                     <Col>
                         <img className="img-fluid" src="https://image.freepik.com/free-vector/contact-center-abstract-concept_335657-3032.jpg" alt="contact" />
                     </Col>
 
                     {/* form area */}
-                    <Col style={{ marginTop: '125px' }} className="text-start">
+                    <Col style={{ marginTop: '80px' }} className="text-start">
                         <Form ref={form} onSubmit={sendEmail}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label>Name</Form.Label>
