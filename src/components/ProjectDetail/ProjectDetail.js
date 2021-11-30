@@ -71,7 +71,7 @@ const ProjectDetail = () => {
     const matchedProject = projects?.find((project) => (project.id === id))
 
     return (
-        <div className="my-5">
+        <div className="my-5 py-5">
             <Container>
                 <a className="me-3" href={matchedProject?.liveSite} target="_blank"><Button variant="outline-primary">Live Site</Button></a>
                 <a className="me-3" href={matchedProject?.clientSideCode} target="_blank"><Button variant="outline-primary">Client Side Code</Button></a>

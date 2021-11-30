@@ -3,10 +3,10 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 const Skills = () => {
     return (
-        <div className="my-5 py-5">
+        <div className="my-5 py-5" id="skills">
             <Container>
                 <h1>Skills</h1>
-                <Row xs={2} md={4} className="g-4">
+                <Row xs={2} md={4} className="g-4 mt-5">
                     <Col>
                         <img style={{ width: "70px" }} className="img-fluid" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="" />
                     </Col>

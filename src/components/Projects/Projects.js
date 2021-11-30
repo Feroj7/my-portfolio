@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row, Button } from 'react-bootstrap';
+import { Col, Container, Row, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Projects.css';
 
@@ -9,7 +9,7 @@ const Projects = () => {
         {
             id: 1,
             name: "Bicycle Store",
-            description: "A full-stack Bicyle Store web app where people can buy different model bicycles. User can login or register by both email, password or google login. Client can see his/her orders in dashboard and can give a review. An admin can add a new bicycle from the dashboard. Admin can also manage user orders and make someone admin.",
+            description: "A full-stack Bicyle Store web app where people can buy different model bicycles. User can login or register by both email, password or google login.",
             img: "https://i.ibb.co/b3bJ49t/bicycle.jpg",
             tech1: "React.js",
             tech2: "Node.js",
@@ -39,10 +39,33 @@ const Projects = () => {
     ]
 
     return (
-        <div className="my-5" id="#projects">
+        <div className="my-5" id="projects">
             <Container>
                 <h1 className="mb-5">My Projects</h1>
-                {
+                <Row xs={1} md={3} className="g-4">
+                    {
+                        projects.map(project => <Col key={project.id}>
+                            <Card className="h-100 project-card">
+                                <Card.Img variant="top" src={project.img} />
+                                <Card.Body>
+                                    <Card.Title>{project.name}</Card.Title>
+                                    <Card.Text>
+                                        {project.description}
+                                    </Card.Text>
+                                    <p className="tech-bg w-25 d-inline">{project?.tech1}</p>
+                                    <p className="tech-bg w-25 d-inline">{project?.tech2}</p>
+                                    <p className="tech-bg w-25 d-inline">{project?.tech3}</p>
+                                    <br />
+                                    <br />
+                                    <p className="tech-bg w-25 d-inline" style={{ marginTop: "30px" }}>{project?.tech4}</p>
+                                    <br />
+                                    <Link to={`/ProjectDetail/${project.id}`}><Button className="mt-5">View Detail</Button></Link>
+                                </Card.Body>
+                            </Card>
+                        </Col>)
+                    }
+                </Row>
+                {/* {
                     projects.map(project => <div key={project.id} className="mt-5 d-flex justify-content-around project-style">
                         <div>
                             <img className="img-fluid" src={project?.img} alt="" />
@@ -58,7 +81,7 @@ const Projects = () => {
                             <Link to={`/ProjectDetail/${project.id}`}><Button className="mt-5">View Detail</Button></Link>
                         </div>
                     </div>)
-                }
+                } */}
             </Container>
         </div>
     );
