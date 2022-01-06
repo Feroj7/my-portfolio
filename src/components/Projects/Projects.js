@@ -48,7 +48,11 @@ const Projects = () => {
     return (
         <div className="my-5" id="projects">
             <Container>
-                <h1 className="mb-5">My Projects</h1>
+                <h1 className="mb-5" style={{
+                    color: "#06175c",
+                    fontSize: "40px",
+                    fontWeight: 800
+                }}>My Projects</h1>
                 <Row xs={1} md={3} className="g-4">
                     {
                         projects.map(project => <Col key={project.id}>
@@ -68,7 +72,7 @@ const Projects = () => {
                                     <br />
                                     <p className="tech-bg w-25 d-inline" style={{ marginTop: "30px" }}>{project?.tech4}</p>
                                     <br />
-                                    <Link to={`/ProjectDetail/${project.id}`}><Button className="mt-5">View Detail</Button></Link>
+                                    <Link to={`/ProjectDetail/${project.id}`}><Button className="mt-5" variant="info">View Detail</Button></Link>
                                 </Card.Body>
                             </Card>
                         </Col>)

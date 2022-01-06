@@ -1,11 +1,15 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 const About = () => {
     return (
         <div className="my-5" id="about">
             <Container>
-                <h1 className="mb-4">About Me</h1>
+                <h1 className="mb-4" style={{
+                    color: "#06175c",
+                    fontSize: "40px",
+                    fontWeight: 800
+                }}> About Me</h1>
                 <div className="w-50 m-auto">
                     <div>
                         <img style={{ width: "200px", height: "200px", borderRadius: "50%", border: "1px solid gray" }} className="img-fluid mb-4" src="https://i.ibb.co/XFgKYYk/Ferojdm.jpg" alt="" />
@@ -23,7 +27,7 @@ const About = () => {
                     </Col>
                 </Row> */}
             </Container>
-        </div>
+        </div >
     );
 };
 

@@ -5,7 +5,11 @@ const Skills = () => {
     return (
         <div className="my-5 py-5" id="skills">
             <Container>
-                <h1>Skills</h1>
+                <h1 style={{
+                    color: "#06175c",
+                    fontSize: "40px",
+                    fontWeight: 800
+                }}>Skills</h1>
                 <Row xs={2} md={4} className="g-4 mt-5">
                     <Col
                         data-aos="flip-up"

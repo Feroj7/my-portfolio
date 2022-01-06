@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Col, Container, Form, Row, Button } from 'react-bootstrap';
+import { Col, Container, Form, Row } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -21,7 +21,11 @@ const Contact = () => {
 
         <div className="my-5" id="contact">
             <Container>
-                <h1>Contact</h1>
+                <h1 style={{
+                    color: "#06175c",
+                    fontSize: "40px",
+                    fontWeight: 800
+                }}>Contact</h1>
                 <Row xs={1} md={2} className="g-4">
                     {/* image area */}
                     <Col>
@@ -47,7 +51,7 @@ const Contact = () => {
                                 <Form.Label>Your Message</Form.Label>
                                 <Form.Control as="textarea" rows={3} name="message" />
                             </Form.Group>
-                            <input type="submit" value="Send" className="btn btn-primary" />
+                            <input type="submit" value="Send" className="btn btn-info" />
                         </Form>
                     </Col>
                 </Row>
