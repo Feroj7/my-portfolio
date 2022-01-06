@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
 import Particles from "react-tsparticles";
+import { Typewriter } from 'react-simple-typewriter'
 
 const Banner = () => {
 
@@ -62,7 +63,7 @@ const Banner = () => {
                         links: {
                             color: "#ffffff",
                             distance: 150,
-                            enable: true,
+                            enable: false,
                             opacity: 0.5,
                             width: 1,
                         },
@@ -74,7 +75,7 @@ const Banner = () => {
                             enable: true,
                             outMode: "bounce",
                             random: false,
-                            speed: 2,
+                            speed: 1,
                             straight: false,
                         },
                         number: {
@@ -88,7 +89,7 @@ const Banner = () => {
                             value: 0.5,
                         },
                         shape: {
-                            type: "circle",
+                            type: "star",
                         },
                         size: {
                             random: true,
@@ -97,14 +98,26 @@ const Banner = () => {
                     },
                     detectRetina: true,
                 }}
-                height="1000px"
             />
             <Container>
                 <Row xs={1} md={2} className="g-4">
                     <Col className="text-start" style={{ paddingTop: '110px' }}>
                         <h6>WELCOME TO MY WORLD</h6>
                         <h1>Hi, I’m <span style={{ color: '#fff' }}>Feroj Alam</span></h1>
-                        <h1 className="mb-5">a Web Developer</h1>
+                        <h1 className="mb-5">
+                            <span style={{ color: 'white' }}>
+                                {/* Style will be inherited from the parent element */}
+                                <Typewriter
+                                    words={['Web Developer', 'Fast Learner', 'Eager to learn new technologies']}
+                                    loop={5}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={150}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                />
+                            </span>
+                        </h1>
                         <a href="https://drive.google.com/file/d/14Rppt4WX_q_ipV9d9oC1cjn479ZGT6MG/view?usp=sharing" target="_blank"><Button variant="info">Resume</Button></a>
                     </Col>
                     <Col>
